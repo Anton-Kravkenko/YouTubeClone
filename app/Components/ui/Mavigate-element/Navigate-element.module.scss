@@ -1,0 +1,22 @@
+
+
+.wrapper {
+display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.text {
+font-size: 20px;
+	margin: 15px 0;
+}
+
+.icon {
+	font-size: 30px;
+}
+.active {
+	font-size: 30px;
+color: crimson;
+	font-weight: bold;
+
+}

@@ -1,0 +1,94 @@
+.LikesWrapper {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.LikesIcon {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.LikesCount {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.VideoTitle {
+	font-size: 26px;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 800px;
+}
+
+.viewsCount {
+	font-weight: 500;
+	font-size: 18px;
+	color: #637575;
+}
+
+.VideoInfoWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: self-start;
+	margin-top: 20px;
+	height: 60px;
+}
+
+.bottomWrapper {
+	display: flex;
+	gap: 25px;
+}
+
+
+.Frame {
+	border: none;
+	height: 500px;
+	border-radius: 15px;
+	width: 100%;
+}
+
+.CommentWrapper {
+	background-color: #1F242D;
+	padding: 20px;
+	z-index: -1;
+	height: 500px;
+	border-radius: 15px;
+	position: relative;
+	
+}
+
+
+.title {
+	font-size: 22px;
+	
+	margin-bottom: 10px;
+}
+
+.lines {
+	border: #232731 1px solid;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.input {
+	position: absolute;
+	bottom: 10px;
+	background-color: #181A20;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	vertical-align: middle;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 90%;
+}
+
+.wrapper {
+	gap: 25px;
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,31 @@
+
+.SubscribeButton {
+	cursor: pointer;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	border: 2px white solid;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.ActiveSubscribeButton {
+	cursor: pointer;
+	background-color: #637575;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	border: 2px #637575 solid;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.SubIcon {
+	font-size: 22px;
+}
+
+.SubText {
+	font-weight: 500;
+	font-size: 18px;
+}

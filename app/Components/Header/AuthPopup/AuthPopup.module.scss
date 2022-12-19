@@ -1,0 +1,59 @@
+
+.UserPopup {
+	top: 100px;
+	right: 10px;
+	background-color: #1F242D;
+	padding: 30px;
+	display: block;
+	border-radius: 15px;
+	position: absolute;
+}
+
+.ChannelPhoto {
+	clip-path: circle(25px at center);
+	cursor: pointer;
+}
+
+.popupLink {
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+.userPhoto {
+	position: relative;
+	color: white;
+	cursor: pointer;
+	font-size: 35px;
+}
+
+.UserPopup input {
+	display: block;
+	margin: 10px 0;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.login {
+	padding: 8px 15px 8px 15px;
+	border-radius: 10px;
+	border: none;
+	font-size: 16px;
+	background-color: crimson;
+}
+
+.register {
+	padding: 8px 15px 8px 15px;
+	border-radius: 10px;
+	border: none;
+	background-color: brown;
+	font-size: 16px;
+}
+
+.ButtonWrapper {
+	display: flex;
+	justify-content: space-between;
+}

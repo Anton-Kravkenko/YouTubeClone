@@ -1,0 +1,42 @@
+.CommentWrapper {
+	background-color: #1F242D;
+	padding: 20px;
+	border-radius: 15px;
+	width: 400px;
+	position: relative;
+}
+
+.Logo {
+	width: 60px;
+	height: 60px;
+	clip-path: circle(30px at center);
+}
+
+.ChannelWrapper {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	margin-top: 20px;
+}
+
+.UserInfo {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.ChannelSubCount {
+	color: #637575;
+	font-size: 16px;
+}
+
+.Channeldescription {
+	color: #637575;
+	font-size: 16px;
+	max-width: 600px;
+	margin-top: 20px;
+}
+
+.ChannelName {
+	font-size: 22px;
+}

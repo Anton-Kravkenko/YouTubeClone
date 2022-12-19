@@ -1,0 +1,23 @@
+
+
+.userWrapper {
+	display: flex;
+	align-items: self-start;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.UserDescription {
+	font-size: 14px;
+	color: #637575;
+}
+.UserName{
+	font-size: 16px;
+	
+	
+}
+.UserLogo {
+	width: 45px;
+	height: 45px;
+	clip-path: circle(22.5px at center);
+}

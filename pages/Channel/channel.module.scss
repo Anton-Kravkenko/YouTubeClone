@@ -1,0 +1,43 @@
+.SubscribersCount {
+	font-size: 16px;
+	color: lightgray;
+}
+
+.ChannelName {
+	font-size: 22px;
+	
+}
+
+.Logo {
+	width: 60px;
+	height: 60px;
+	clip-path: circle(30px at center);
+}
+
+.lines {
+	border: 1px #1F242D solid;
+	margin-top: 20px;
+	background-color: #1F242D;
+	margin-bottom: 20px;
+}
+
+.VideoWrapper {
+	margin-top: 20px;
+}
+
+.title {
+	margin-bottom: 10px;
+}
+
+.ChannelWrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.description {
+	color: #637575;
+	max-width: 500px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
