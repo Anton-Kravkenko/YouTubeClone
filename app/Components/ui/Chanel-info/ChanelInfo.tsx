@@ -18,8 +18,8 @@ const ChanelInfo: FC<IComent> = ({ Logo, Name, subscribersCount, description, li
   return <>
     
     <div className={styles.ChannelWrapper}>
-      <Link href={linkUrl || 'javascript: void(0)'} className={styles.UserInfo}>
-        <img className={styles.Logo} src={GetMedia(Logo)} />
+      <Link href={linkUrl || ''} className={styles.UserInfo}>
+        <img alt={'Logo'} className={styles.Logo} src={GetMedia(Logo)} />
         <div>
           <h2 className={styles.ChannelName}>{Name}</h2>
           {subscribersCount ? <p className={styles.SubscribersCount}>{getNumber(subscribersCount)} folowers</p> : null}

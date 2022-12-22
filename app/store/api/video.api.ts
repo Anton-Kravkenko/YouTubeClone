@@ -1,4 +1,4 @@
-import { iVideo, IVideoDto } from '../../../shared/types/Video.types'
+import { iVideo } from '../../../shared/types/Video.types'
 import { api, VIDEO } from './api'
 
 
@@ -24,14 +24,14 @@ export const videoApi = api.injectEndpoints({
       query: id => `/${VIDEO}/get-private/${id}`,
       providesTags: (result, error, id) => [{ type: 'Video', id }],
     }),
-    createVideo: builder.mutation<string, void>({
+    createVideo: builder.mutation<number, void>({
       query: () => ({
         url: `/${VIDEO}`,
         method: 'POST',
       }),
       invalidatesTags: () => [{ type: 'Profile' }],
     }),
-    updateVideo: builder.mutation<iVideo, IVideoDto>({
+    updateVideo: builder.mutation<iVideo, any>({
       query: ({ id, ...body }) => ({
         url: `/${VIDEO}/${id}`,
         method: 'PUT',
@@ -49,13 +49,7 @@ export const videoApi = api.injectEndpoints({
       }),
       invalidatesTags: (result, error, id) => [{ type: 'Video', id }],
     }),
-    updateLikes: builder.mutation<iVideo, number>({
-      query: id => ({
-        url: `/${VIDEO}/update-likes/${id}`,
-        method: 'PUT',
-      }),
-      invalidatesTags: (result, error, id) => [{ type: 'Video', id }],
-    }),
+    
     deleteVideo: builder.mutation<void, number>({
       query: id => ({
         url: `/${VIDEO}/${id}`,

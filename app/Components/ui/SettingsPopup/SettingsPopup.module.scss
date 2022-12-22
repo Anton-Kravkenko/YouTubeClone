@@ -1,0 +1,67 @@
+.lines {
+	border: 1px #1F242D solid;
+	margin-top: 20px;
+	background-color: #1F242D;
+	margin-bottom: 20px;
+}
+
+
+.Button {
+	background-color: brown;
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.Popup {
+	position: fixed;
+	background-color: #1F242D;
+	padding: 30px;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	transform: translate(-50%, -50%);
+	border-radius: 15px;
+}
+
+.field {
+	display: block;
+	resize: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.file {
+	display: block;
+	color: #637575;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.file::-webkit-file-upload-button {
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #637575;
+}
+
+.button {
+	background: brown;
+	border: none;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 15px 10px 15px;
+	border-radius: 10px;
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}

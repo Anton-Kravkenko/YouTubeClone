@@ -5,6 +5,32 @@
 	width: 20%;
 }
 
+@media (max-width: 1050px) {
+	.LeftBarWrapper {
+		position: fixed;
+		display: flex;
+		width: 40vw;
+		height: 100px;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		background-color: #232731;
+		z-index: 1000000;
+	}
+	.LogoText {
+		display: none;
+	}
+	.title {
+		display: none;
+	}
+	.lines {
+		display: none;
+	}
+	.description {
+		display: none;
+	}
+	
+}
 
 .lines {
 	border: 1px #1F242D solid;

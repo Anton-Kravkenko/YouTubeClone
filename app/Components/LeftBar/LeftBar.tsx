@@ -22,11 +22,11 @@ const LeftBar = () => {
         
         <h2 className={styles.title}>My subscribers</h2>
         
-        {Profile?.subscriptions.map(({ toChannel }) => <div key={toChannel.id}>
+        {Profile?.subscriptions ? Profile?.subscriptions.map(({ toChannel }) => <div key={toChannel.id}>
           <Subscribes ChannelName={toChannel.name} LinkPatch={`Channel/${toChannel.id}`}
                       avatarUrl={toChannel.avatarPath} line={false} />
         
-        </div>)}
+        </div>) : null}
       </>
       : null}
     

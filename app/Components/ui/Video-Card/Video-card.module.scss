@@ -8,6 +8,10 @@
 	padding: 0;
 }
 
+@media (max-width: 1050px) {
+
+}
+
 .CardWrapper {
 	display: grid;
 	gap: 20px;
@@ -16,7 +20,7 @@
 }
 
 .VideoText {
-	margin-top: 10px;
+	margin-top: 5px;
 	font-size: 16px;
 	white-space: normal;
 	display: -webkit-box;
@@ -28,36 +32,38 @@
 	max-width: 320px;
 }
 
-.verified {
-	font-size: 25px;
-	align-items: center;
-	color: brown;
-	display: flex;
-}
 
 .info {
 	display: flex;
-	align-items: center;
 	gap: 10px;
-	margin-top: 10px;
+	margin-top: 5px;
 }
 
 .views {
 	font-size: 16px;
 }
 
+.timeAgo {
+	color: #637575;
+	font-size: 16px;
+}
+
 .logo {
-	width: 30px;
+	width: 50px;
 	border-radius: 100%;
 	object-fit: cover;
-	height: 30px;
+	height: 50px;
+	right: 20px;
+	bottom: -20px;
+	position: absolute;
 }
 
-.ChannelWraper {
-	display: flex;
-	gap: 10px;
+.VideoImageWrapper {
+	position: relative;
 }
+
 
 .ChannelName {
+	color: #637575;
 	font-size: 16px;
 }

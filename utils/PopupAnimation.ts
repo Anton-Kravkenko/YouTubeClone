@@ -1,17 +1,19 @@
 export const variants = {
+  open: {
+    opacity: 1,
+    display: 'block',
+    zIndex: 1000,
+    transition: {
+      type: 'spring', duration: 0.3, stiffness: 300, damping: 54,
+    },
+  },
   closed: {
-    scaleY: 0,
-    zIndex: 0,
-    scaleX: 0,
-    scaleZ: 0,
     opacity: 0,
+    zIndex: -1,
+    transition: {
+      type: 'spring', duration: 0.3, stiffness: 300, damping: 54,
+      
+    },
     
   },
-  open: {
-    scale: 1,
-    height: 100,
-    zIndex: 100,
-    opacity: 1,
-  },
-  
 }

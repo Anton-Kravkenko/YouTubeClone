@@ -12,6 +12,7 @@ export interface iVideo {
   updatedAt: string
   user: IVideoUser
   createdAt: string
+  comments: IComment[]
 }
 
 export interface IVideoUser {

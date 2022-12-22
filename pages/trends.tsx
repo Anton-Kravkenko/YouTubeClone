@@ -16,7 +16,7 @@ const Trends = () => {
     }}>Trends</h2>
     <VideoCardWrapper>
       {data?.map((item) => (
-        <VideoCard key={item.id} views={item.views} ChannelVerified={item.user.isVerified}
+        <VideoCard createdAt={item.createdAt} key={item.id} views={item.views} ChannelVerified={item.user.isVerified}
                    ChannelName={item.user.name}
                    ChannelPhoto={item.user.avatarPath}
                    VideoText={item.name}

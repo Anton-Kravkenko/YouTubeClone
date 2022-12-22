@@ -6,4 +6,5 @@ export interface VideoCardInterface {
   linkPatch?: string | number,
   views: number | string,
   ChannelVerified: boolean
+  createdAt: string
 }

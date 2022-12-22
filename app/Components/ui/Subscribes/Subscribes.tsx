@@ -12,7 +12,7 @@ export const Subscribes: FC<{ ChannelName: string, line?: boolean, LinkPatch: st
   return (
     <Link href={LinkPatch}>
       <div className={styles.wrapper}>
-        <img src={GetMedia(avatarUrl)} className={styles.logo} />
+        <img alt={'Avatar'} src={GetMedia(avatarUrl)} className={styles.logo} />
         <p className={styles.text}>{ChannelName}</p>
       </div>
       {line ? <hr className={styles.lines} /> : null}
