@@ -21,7 +21,7 @@
 }
 
 .Popup {
-	position: absolute;
+	position: fixed;
 	background-color: #1F242D;
 	padding: 30px;
 	display: flex;
@@ -29,9 +29,8 @@
 	border-radius: 15px;
 	
 	@media (max-width: 450px) {
-		display: block;
-		width: 100%;
-		right: 0;
+		position: fixed;
+		right: 10px;
 		left: 10px;
 		padding: 15px;
 	}
