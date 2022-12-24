@@ -48,23 +48,21 @@
 
 .Frame {
 	border: none;
-	height: 500px;
+	height: 490px;
 	border-radius: 15px;
 	width: 100%;
 	@media (min-width: 700px) and (max-width: 1050px){
-		height: 350px;
-		
+		height: 390px;
 	}
 }
 
 .CommentWrapper {
 	background-color: #1F242D;
 	padding: 20px;
-	height: 500px;
+	height: 450px;
 	border-radius: 15px;
 	min-width: 250px;
 	position: relative;
-	
 	@media (min-width: 700px) and (max-width: 1050px){
 		height: 350px;
 	}
@@ -94,7 +92,8 @@
 
 .input {
 	background-color: #181A20;
-	padding: 10px;
+text-indent: 10px;
+	padding: 10px 0;
 	border: none;
 	border-radius: 5px;
 	width: 100%;

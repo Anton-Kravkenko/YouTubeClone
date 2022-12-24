@@ -1,0 +1,18 @@
+.mainWrapper{
+display: flex;
+	width: 100%;
+	
+	@media (max-width: 700px) {
+		display: block;
+	}
+}
+
+.contentWrapper {
+display: block;
+	width: 100%;
+	padding: 25px;
+	
+	@media (max-width: 450px) {
+		display: block;
+	}
+}

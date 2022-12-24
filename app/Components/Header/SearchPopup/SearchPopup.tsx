@@ -11,6 +11,7 @@ const SearchPopup = () => {
   const { register, watch } = useForm()
   const debounceSearch = useDebounce(watch('Search'), 500)
   const { data } = videoApi.useGetVideosBySearchTermQuery(debounceSearch, {
+    skip: !debounceSearch,
     selectFromResult: ({ data }) => ({ data: data?.slice(0, 3) }),
   })
   return <div style={{
