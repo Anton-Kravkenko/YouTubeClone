@@ -9,13 +9,18 @@
 	.LeftBarWrapper {
 		position: fixed;
 		display: flex;
-		width: 40vw;
-		height: 100px;
+		width: max-content;
+		height: 80px;
 		bottom: 0;
 		left: 50%;
 		transform: translate(-50%, 0%);
 		background-color: #232731;
 		z-index: 1000000;
+		gap: 20px;
+		justify-content: space-between;
+	}
+	.LogoTextWrapper {
+		display: none;
 	}
 	.LogoText {
 		display: none;

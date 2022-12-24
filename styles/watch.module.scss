@@ -116,4 +116,7 @@
 	gap: 25px;
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 500px) {
+		display: block;
+	}
 }

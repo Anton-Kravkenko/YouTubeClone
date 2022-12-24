@@ -11,8 +11,8 @@ const VideoCard: FC<VideoCardInterface> = (props) => {
   return <div className={styles.wraper}>
     <Link href={`/watch/${props.linkPatch}`}>
       <div className={styles.VideoImageWrapper}>
-        <img alt={'Image'} className={styles.image} src={GetMedia(props.ImageUrl)} />
         <img alt={'Logo'} className={styles.logo} src={GetMedia(props.ChannelPhoto)} />
+        <img alt={'Image'} className={styles.image} src={GetMedia(props.ImageUrl)}/>
       </div>
       <p className={styles.ChannelName}>{props.ChannelName}</p>
       <h3 className={styles.VideoText}>{props.VideoText}</h3>

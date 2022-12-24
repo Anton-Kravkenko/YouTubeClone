@@ -9,7 +9,7 @@ const LeftBar = () => {
   const { user } = useAuth()
   const { data: Profile, isLoading: ProfileLoading } = api.useGetProfileQuery(null)
   return <div className={styles.LeftBarWrapper}>
-    <Link href={'/'}>
+    <Link className={styles.LogoTextWrapper} href={'/'}>
       <h1 className={styles.LogoText}>AntonTube</h1>
     </Link>
     <NavigateElement LinkPatch={'/'} IconText='Explore' iconName={'MdOutlineExplore'} />
