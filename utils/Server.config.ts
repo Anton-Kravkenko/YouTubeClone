@@ -1,2 +1,2 @@
-export const Api_URL = 'http://localhost:4200/api/'
-export const Server_URL = 'http://localhost:4200'
+export const Api_URL = 'https://backendforyoutube-production.up.railway.app/api/'
+export const Server_URL = 'https://backendforyoutube-production.up.railway.app'
