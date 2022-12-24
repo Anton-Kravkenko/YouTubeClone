@@ -30,7 +30,7 @@ const Id = () => {
   return <div>
     <div className={styles.wrapper}>
       <div style={{ width: '100%' }}>
-        <iframe className={styles.Frame} src={GetMedia(video.videoPath)} />
+        <iframe className={styles.Frame} allowFullScreen={true} frameBorder={0} src={GetMedia(video.videoPath)} />
         <div className={styles.VideoInfoWrapper}>
           <div>
             <h2 className={styles.VideoTitle}>{video.name}</h2>
