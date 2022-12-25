@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import NextNProgress from 'nextjs-progressbar'
+import { SkeletonTheme } from 'react-loading-skeleton'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import Layout from '../app/Components/Layaut/Layout'
@@ -17,11 +18,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='description' content='YouTube-clone' />
         <link rel='icon' href='/Dakirby309-Simply-Styled-YouTube.ico' />
       </Head>
+      <SkeletonTheme baseColor={"#1F242D"} highlightColor={'#181A20'}>
       <Layout>
         <Component {...pageProps} />
         <NextNProgress color={'red'} />
         <Toastr />
       </Layout>
+      </SkeletonTheme>
     </PersistGate>
   </Provider>
 }

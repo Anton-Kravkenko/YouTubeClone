@@ -3,6 +3,7 @@ import { api } from '../../store/api/api'
 import { useAuth } from '../../store/auth/useAuth'
 import { NavigateElement } from '../ui/Mavigate-element/Navigate-element'
 import { Subscribes } from '../ui/Subscribes/Subscribes'
+import CardLoader from '../ui/Video-Card/CardLoader/CardLoader'
 import styles from './LeftBar.module.scss'
 
 const LeftBar = () => {
@@ -34,6 +35,7 @@ const LeftBar = () => {
     
     <p className={styles.description}>2023 Youtube-Clone <br /> by
       Anton Kravkenko </p>
+    
   
   </div>
 }

@@ -13,27 +13,30 @@
 .Searchwrapper {
 	display: flex;
 	gap: 20px;
+	@media (max-width: 1200px) {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
 	@media (max-width: 450px) {
 		display: block;
-	
 	}
 	
 }
 
 .Popup {
-	position: fixed;
+	position: absolute;
 	background-color: #1F242D;
 	padding: 30px;
 	display: flex;
 	gap: 20px;
 	border-radius: 15px;
-	
-	@media (max-width: 450px) {
+	@media (max-width: 1200px) {
 		position: fixed;
 		right: 10px;
 		left: 10px;
 		padding: 15px;
 	}
+	
 	
 }
 

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { GetMedia } from '../../../../utils/GetMedia'
 import { getNumber } from '../../../../utils/GetNumber'
+import CardLoader from './CardLoader/CardLoader'
 import styles from './Video-card.module.scss'
 import { VideoCardInterface } from './videoCard.interface'
 
