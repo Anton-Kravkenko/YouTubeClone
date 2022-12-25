@@ -1,6 +1,7 @@
 import ChanelInfo from '../app/Components/ui/Chanel-info/ChanelInfo'
 import SettingsPopup from '../app/Components/ui/SettingsPopup/SettingsPopup'
 import UploadVideoPopup from '../app/Components/ui/UploadVideoPopup/UploadVideoPopup'
+import CardLoader from '../app/Components/ui/Video-Card/CardLoader/CardLoader'
 import VideoCard from '../app/Components/ui/Video-Card/Video-card'
 import VideoCardWrapper from '../app/Components/ui/Video-Card/VideoCardWrapper'
 import { api } from '../app/store/api/api'
@@ -20,6 +21,7 @@ const Studio = () => {
     <hr className={styles.lines} />
     
     <VideoCardWrapper>
+      {ChannelLoading && <CardLoader count={10} />}
       {Channel.videos.map((video) => <div key={video.id}>
         <VideoCard createdAt={video.createdAt} linkPatch={video.id} ImageUrl={video.thumbnailPath}
                    VideoText={video.name}

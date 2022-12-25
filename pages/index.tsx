@@ -13,8 +13,9 @@ export default function Home() {
         margin: '10px 0px 30px 0px',
       }}>Explore</h2>
       <VideoCardWrapper>
+        {isLoading && <CardLoader count={10} />}
+  
         {data?.map((item) => (
-          isLoading ? <CardLoader key={item.id}/> :
           <VideoCard createdAt={item.createdAt} key={item.id} linkPatch={item.id} views={item.views}
                      ChannelVerified={item.user.isVerified}
                      ChannelName={item.user.name}
