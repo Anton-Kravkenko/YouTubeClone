@@ -18,10 +18,8 @@ export const useOutside = (initialIsVisible: boolean): TypeOut => {
   
   useEffect(() => {
     document.addEventListener('click', handleClickOutside, true)
-    document.addEventListener('scroll', handleClickOutside, true)
     return () => {
       document.removeEventListener('click', handleClickOutside, true)
-      document.addEventListener('scroll', handleClickOutside, true)
     }
   })
   return { ref, isShow, setIsShow }

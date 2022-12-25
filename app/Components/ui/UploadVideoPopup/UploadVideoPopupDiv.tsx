@@ -26,12 +26,11 @@ console.log()
       ref={props.ComponentsRef}
       className={styles.Popup}
       initial={{ opacity: '0' }}
-      viewport={{ once: true }}
+     
       animate={props.isShow ? 'open' : 'closed'}
       variants={variants}
       transition={{
         delay: 0.1,
-        yoyo: Infinity,
         default: { ease: 'easeInOut' },
       }}>
       {!props.VideoStage ? <div className={styles.LoadWrapper}>

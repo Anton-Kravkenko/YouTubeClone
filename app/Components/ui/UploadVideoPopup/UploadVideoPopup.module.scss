@@ -25,6 +25,10 @@
 	right: 30px;
 	padding: 10px 20px 10px 20px;
 	border-radius: 10px;
+	
+	@media (max-width: 1000px) {
+		position: revert;
+	}
 }
 
 .SubmitButton {
@@ -49,6 +53,21 @@
 	height: 400px;
 	transform: translate(-50%, -50%);
 	border-radius: 15px;
+	
+	@media (max-width: 1000px) {
+		position: fixed;
+		background-color: #232731;
+		padding: 30px;
+		top: 10px;
+		width: revert;
+		left: 10px;
+		right: 10px;
+		height: 75%;
+		transform: none;
+		overflow: auto !important;
+		overflow-y: scroll !important;
+		border-radius: 15px;
+	}
 }
 
 
@@ -60,6 +79,7 @@
 	display: flex;
 	gap: 40px;
 	justify-content: space-between;
+flex-wrap: wrap;
 }
 
 .CardWrapper {
@@ -80,6 +100,11 @@
 	border: none;
 	margin: 20px 0;
 	border-radius: 10px;
+	
+	@media (max-width: 1000px) {
+		height: 50px;
+		width: -webkit-fill-available;
+	}
 }
 
 .field {
@@ -90,6 +115,10 @@
 	border: none;
 	padding: 10px;
 	border-radius: 10px;
+	@media (max-width: 1000px) {
+		height: 25px;
+		width: -webkit-fill-available;
+	}
 }
 
 .file {
