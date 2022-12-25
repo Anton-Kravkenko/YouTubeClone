@@ -88,6 +88,9 @@ flex-wrap: wrap;
 	border-radius: 20px;
 	padding: 20px;
 	border: 1px #637575 solid;
+	@media (max-width: 1000px) {
+		width: fit-content;
+	}
 }
 
 
