@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { GetMedia } from '../../../../utils/GetMedia'
@@ -12,8 +13,9 @@ export const Subscribes: FC<{ ChannelName: string, line?: boolean, LinkPatch: st
   return (
     <Link href={LinkPatch}>
       <div className={styles.wrapper}>
-        <img alt={'Avatar'} src={GetMedia(avatarUrl)} className={styles.logo} />
-        <p className={styles.text}>{ChannelName}</p>
+    <Image height={100} width={100} alt={'Avatar'} src={avatarUrl ? GetMedia(avatarUrl) : 'https://johannesippen.com/img/blog/humans-not-users/header.jpg'} className={styles.logo} />
+      
+        <p className={styles.text}>{ChannelName ? ChannelName : "No name"}</p>
       </div>
       {line ? <hr className={styles.lines} /> : null}
     </Link>

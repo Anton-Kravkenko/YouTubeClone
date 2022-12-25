@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { BiUserCircle } from 'react-icons/bi'
@@ -26,7 +27,7 @@ const AuthPopup = () => {
   }
   
   if (Channel && user) return <>
-    <img src={GetMedia(Channel.avatarPath)} alt={'Load..'} width={50} height={50}
+    <Image  src={Channel.avatarPath ? GetMedia(Channel.avatarPath) : 'https://johannesippen.com/img/blog/humans-not-users/header.jpg'} alt={'Load..'} width={50} height={50}
          onClick={() => setIsShow(!isShow)}
          className={styles.ChannelPhoto} />
     <motion.div

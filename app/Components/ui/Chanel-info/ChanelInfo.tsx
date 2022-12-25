@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { GetMedia } from '../../../../utils/GetMedia'
@@ -19,15 +20,16 @@ const ChanelInfo: FC<IComent> = ({ Logo, Name, subscribersCount, description, li
     
     <div className={styles.ChannelWrapper}>
       <Link href={linkUrl || ''} className={styles.UserInfo}>
-        <img alt={'Logo'} className={styles.Logo} src={GetMedia(Logo)} />
+        {Logo ? <Image height={100} width={100} alt={'Logo'} className={styles.Logo} src={GetMedia(Logo)} /> : <Image height={100} width={100} alt={'Logo'} className={styles.Logo} src={'https://johannesippen.com/img/blog/humans-not-users/header.jpg'} />}
+        
         <div>
-          <h2 className={styles.ChannelName}>{Name}</h2>
+          <h2 className={styles.ChannelName}>{Name  ? Name : <p>No name</p>}</h2>
           {subscribersCount ? <p className={styles.SubscribersCount}>{getNumber(subscribersCount)} folowers</p> : null}
         </div>
       </Link>
       <SubscribeButton ChannelId={ChannelId} />
     </div>
-    <p className={styles.Channeldescription}>{description} </p>
+    <p className={styles.Channeldescription}>{description ? description : <p>None description</p>} </p>
   </>
 }
 

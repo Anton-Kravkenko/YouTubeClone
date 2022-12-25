@@ -12,10 +12,10 @@ const VideoCard: FC<VideoCardInterface> = (props) => {
   return <div className={styles.wraper}>
     <Link href={`/watch/${props.linkPatch}`}>
       <div className={styles.VideoImageWrapper}>
-        <img alt={'Logo'} className={styles.logo} src={GetMedia(props.ChannelPhoto)} />
-        <img alt={'Image'} className={styles.image} src={GetMedia(props.ImageUrl)}/>
+        <Image height={1000} width={1000} alt={'Logo'} className={styles.logo} src={ props.ChannelPhoto ? GetMedia(props.ChannelPhoto) : 'https://johannesippen.com/img/blog/humans-not-users/header.jpg'} />
+        <Image height={1000} width={1000} alt={'Image'} className={styles.image} src={GetMedia(props.ImageUrl)}/>
       </div>
-      <p className={styles.ChannelName}>{props.ChannelName}</p>
+      <p className={styles.ChannelName}>{props.ChannelName ? props.ChannelName : "No name"}</p>
       <h3 className={styles.VideoText}>{props.VideoText}</h3>
     </Link>
     <div className={styles.info}>

@@ -6,7 +6,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
-    domains: ['www.pngitem.com'],
+    domains: ['www.pngitem.com', 'backendforyoutube-production.up.railway.app', 'johannesippen.com'],
   },
   reactStrictMode: true,
   swcMinify: true,
