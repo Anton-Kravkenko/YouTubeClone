@@ -22,7 +22,7 @@ const LeftBar = () => {
     
     </>
     }
-    
+    <div className={styles.wrapperForAdaptive}>
     
     {Profile?.subscriptions.length ? <div>
       <hr className={styles.lines} />
@@ -38,7 +38,7 @@ const LeftBar = () => {
     
     <p className={styles.description}>2023 Youtube-Clone <br /> by
       Anton Kravkenko </p>
-  
+    </div>
   
   </div>
 }
