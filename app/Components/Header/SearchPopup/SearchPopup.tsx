@@ -5,6 +5,7 @@ import { variants } from '../../../../utils/PopupAnimation'
 import { useDebounce } from '../../../../utils/useDebaunce'
 import { videoApi } from '../../../store/api/video.api'
 import VideoCard from '../../ui/Video-Card/Video-card'
+import SearchPopupDiv from './SearchPopupDiv'
 import styles from './SearchPopup.module.scss'
 
 const SearchPopup = () => {
@@ -14,35 +15,13 @@ const SearchPopup = () => {
     skip: !debounceSearch,
     selectFromResult: ({ data }) => ({ data: data?.slice(0, 3) }),
   })
-  return <div style={{
-    width: '100%',
-  }}>
+  return <div className={styles.SearchDivWrapper}>
     
     <div className={styles.wrapper}>
       <HiOutlineSearch className={styles.icon} />
       <input {...register('Search')} className={styles.inputs} placeholder='Type to search...' />
     </div>
-    {data?.length ?
-      <motion.div
-        className={styles.Popup}
-        initial={{ opacity: '0' }}
-        viewport={{ once: true }}
-        animate={debounceSearch ? 'open' : 'closed'}
-        variants={variants}
-        transition={{
-          delay: 0.1,
-          yoyo: Infinity,
-          default: { ease: 'easeInOut' },
-        }}>
-        <div className={styles.Searchwrapper}>
-          {data?.map((video) => <div key={video.id}>
-            <VideoCard createdAt={video.createdAt} linkPatch={video.id} ImageUrl={video.thumbnailPath}
-                       VideoText={video.name}
-                       ChannelPhoto={video.user.avatarPath} ChannelName={video.user.name}
-                       views={video.views} ChannelVerified={video.user.isVerified} />
-          </div>)}
-        </div>
-      </motion.div> : null}
+    <SearchPopupDiv data={data} debounceSearch={debounceSearch}/>
   </div>
 }
 

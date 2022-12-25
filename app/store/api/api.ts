@@ -25,6 +25,7 @@ export const api = createApi({
       query: () => `${USER}/profile`,
       providesTags: () => [{ type: 'Profile' }],
     }),
+    
     uploadMedia: builder.mutation<IMediaResponse, any>({
       query: (media) => ({
         url: `media`,

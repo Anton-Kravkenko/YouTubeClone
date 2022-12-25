@@ -10,11 +10,11 @@ import { api } from '../../../store/api/api'
 import { useAuth } from '../../../store/auth/useAuth'
 import { useAction } from '../../../store/useAction'
 import styles from './AuthPopup.module.scss'
+import AuthPopupDiv from './AuthPopupDiv'
 
 const AuthPopup = () => {
   const { user } = useAuth()
   const { data: Channel, isLoading } = api.useGetProfileQuery(null)
-  const { register, handleSubmit } = useForm()
   const { register: RegisterForm, login, logout } = useAction()
   const { ref, setIsShow, isShow } = useOutside(false)
   const HandleRegister = (data: any, e: any) => {
@@ -25,53 +25,13 @@ const AuthPopup = () => {
     e.preventDefault()
     login(data)
   }
-  
-  if (Channel && user) return <>
-    <Image  src={Channel.avatarPath ? GetMedia(Channel.avatarPath) : 'https://johannesippen.com/img/blog/humans-not-users/header.jpg'} alt={'Load..'} width={50} height={50}
-         onClick={() => setIsShow(!isShow)}
-         className={styles.ChannelPhoto} />
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      viewport={{ once: true }}
-      animate={isShow ? 'open' : 'closed'}
-      variants={variants}
-      transition={{
-        delay: 0.5,
-        default: { ease: 'circOut' },
-      }}>
-      <div className={styles.UserPopup}>
-        <Link href={'/studio'}>
-          <p className={styles.popupLink}>Studio</p>
-        </Link>
-        <p className={styles.popupLink}>Upload Video</p>
-        <p className={styles.popupLink}>Settings</p>
-        <p className={styles.popupLink} onClick={logout}>Logout</p>
-      </div>
-    </motion.div>
-  </>
-  
+
   return <>
-    <AnimatePresence>
-      <BiUserCircle onClick={() => setIsShow(!isShow)} className={styles.userPhoto} />
-      <motion.div
-        key='modal'
-        initial={false}
-        exit={{ display: 'none' }}
-        animate={isShow ? 'open' : 'closed'}
-        variants={variants}
-      
-      >
-        <form className={styles.UserPopup}>
-          <input {...register('email')} placeholder={'Email'} />
-          <input {...register('password')} placeholder={'Password'} />
-          <div className={styles.ButtonWrapper}>
-            <button className={styles.login} onClick={handleSubmit(HandleLogin)}>Login</button>
-            <button className={styles.register} onClick={handleSubmit(HandleRegister)}>Register</button>
-          </div>
-        </form>
-      </motion.div>
-    </AnimatePresence>
+    {Channel ? <Image width={50} height={50} src={GetMedia(Channel.avatarPath)}
+                      alt={'Logo'} onClick={() => setIsShow(!isShow)} className={styles.ChannelPhoto} /> :  <BiUserCircle onClick={() => setIsShow(!isShow)} className={styles.userPhoto} /> }
+    
+    
+    <AuthPopupDiv  Channel={Channel} isShow={isShow} setIsShow={setIsShow} ComponentsRef={ref} user={user} logout={logout} HandleRegister={HandleRegister} HandleLogin={HandleLogin}/>
   </>
 }
 

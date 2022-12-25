@@ -19,7 +19,7 @@ const ChanelInfo: FC<IComent> = ({ Logo, Name, subscribersCount, description, li
   return <>
     
     <div className={styles.ChannelWrapper}>
-      <Link href={linkUrl || ''} className={styles.UserInfo}>
+      <Link href={linkUrl || 'javascript:void(0)'} className={styles.UserInfo}>
         {Logo ? <Image height={100} width={100} alt={'Logo'} className={styles.Logo} src={GetMedia(Logo)} /> : <Image height={100} width={100} alt={'Logo'} className={styles.Logo} src={'https://johannesippen.com/img/blog/humans-not-users/header.jpg'} />}
         
         <div>
