@@ -27,7 +27,7 @@ const AuthPopup = () => {
   }
 
   return <>
-    {Channel ? <Image width={50} height={50} src={GetMedia(Channel.avatarPath)}
+    {Channel && user ? <Image  width={50} height={50} src={Channel.avatarPath ? GetMedia(Channel.avatarPath) : 'https://johannesippen.com/img/blog/humans-not-users/header.jpg'}
                       alt={'Logo'} onClick={() => setIsShow(!isShow)} className={styles.ChannelPhoto} /> :  <BiUserCircle onClick={() => setIsShow(!isShow)} className={styles.userPhoto} /> }
     
     

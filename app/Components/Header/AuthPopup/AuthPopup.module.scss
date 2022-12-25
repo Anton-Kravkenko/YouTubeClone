@@ -12,6 +12,7 @@
 .ChannelPhoto {
 	clip-path: circle(25px at center);
 	cursor: pointer;
+	object-fit: cover;
 }
 
 .popupLink {
