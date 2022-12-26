@@ -11,3 +11,29 @@
 	align-items: center;
 	margin-top: 20px;
 }
+
+.edit {
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.delete {
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.Wrapper {
+	position: relative;
+}
+
+.iconWrapper {
+	display: flex;
+	position: absolute;
+	background-color: #181A20;
+	padding: 10px;
+	border-radius: 10px;
+	z-index: 10;
+right: 10px;
+	top: 10px;
+	gap: 5px;
+}

@@ -9,7 +9,7 @@ import { useAuth } from '../../../store/auth/useAuth'
 import styles from './SettingsPopup.module.scss'
 import SettingsPopupDiv from './SettingsPopupDiv'
 
-const SettingsPopup = () => {
+const Settings = () => {
 
   const { ref, setIsShow, isShow } = useOutside(false)
   const { user } = useAuth()
@@ -32,4 +32,4 @@ const SettingsPopup = () => {
   </div>
 }
 
-export default SettingsPopup
+export default Settings

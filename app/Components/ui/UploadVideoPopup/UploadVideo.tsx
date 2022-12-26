@@ -7,7 +7,7 @@ import { videoApi } from '../../../store/api/video.api'
 import styles from './UploadVideoPopup.module.scss'
 import UploadVideoPopupDiv from './UploadVideoPopupDiv'
 
-const UploadVideoPopup = () => {
+const UploadVideo = () => {
   const { register, handleSubmit, watch, reset } = useForm()
   const { ref, setIsShow, isShow } = useOutside(false)
   const [upload, {isLoading}] = api.useUploadMediaMutation()
@@ -53,4 +53,4 @@ const UploadVideoPopup = () => {
   </div>
 }
 
-export default UploadVideoPopup
+export default UploadVideo
