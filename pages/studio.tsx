@@ -17,7 +17,8 @@ const Studio = () => {
                 description={Channel.description} />
     <div className={styles.buttonWrapper}>
       <SettingsPopup />
-      <UploadVideoPopup /></div>
+      <UploadVideoPopup />
+    </div>
     <hr className={styles.lines} />
     
     <VideoCardWrapper>

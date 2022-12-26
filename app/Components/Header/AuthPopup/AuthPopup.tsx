@@ -22,13 +22,16 @@ const AuthPopup = () => {
   const HandleRegister = async (data: any, e: any) => {
     e.preventDefault()
     await RegisterForm(data)
+    await router.reload()
   }
   const HandleLogin = async (data: any, e: any) => {
     e.preventDefault()
     await login(data)
+    await router.reload()
   }
   const HandleLogout = async (data: any, e: any) => {
     await logout()
+    await router.reload()
   }
 
   return <>

@@ -14,6 +14,7 @@ const UploadVideoPopup = () => {
   const [createVideo, { data: Videoid }] = videoApi.useCreateVideoMutation()
   const [VideoStage, setVideoStage] = useState(false)
   const [updateVideo] = videoApi.useUpdateVideoMutation()
+  const { data: Profile, isLoading: ProfileLoading } = api.useGetProfileQuery(null)
   const UpdateInfo = async (data: any) => {
     const media = new FormData()
     media.append('media', data.thumbnailPath[0])
@@ -45,7 +46,9 @@ const UploadVideoPopup = () => {
     
   }
   return <div>
-    <button onClick={() => setIsShow(!isShow)} className={styles.Button}>Add new video</button>
+    {Profile?.name && Profile?.avatarPath ?  <button onClick={() => setIsShow(!isShow)} className={styles.Button}>Add new video</button> : <p className={styles.ErrorText}>Upload settings!</p>}
+   
+    
     <UploadVideoPopupDiv FileLoading={isLoading} isShow={isShow} setIsShow={setIsShow} ComponentsRef={ref} VideoStage={VideoStage} VideoSubmit={VideoSubmit} UpdateInfo={UpdateInfo}/>
   </div>
 }

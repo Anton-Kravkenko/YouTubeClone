@@ -1,7 +1,7 @@
 export const variants = {
   open: {
     opacity: 1,
-    boxShadow: "black 0px 0px 643px",
+    boxShadow: "#181A20 0px 0px 643px",
     display: 'block',
     zIndex: 1000,
     transition: {
