@@ -45,11 +45,22 @@ input:focus {
 
 @media (prefers-color-scheme: dark) {
 	html {
-		color-scheme: dark;
+		color-scheme: dark !important;
 	}
 	
 	body {
-		color: white;
+		color: white ;
+		background: #181A20;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	html {
+		color-scheme: dark !important;
+	}
+	
+	body {
+		color: white ;
 		background: #181A20;
 	}
 }
