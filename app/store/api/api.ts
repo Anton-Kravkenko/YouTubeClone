@@ -31,7 +31,6 @@ export const api = createApi({
         url: `media`,
         method: 'POST',
         body: media,
-        
       }),
     }),
     

@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import { BiUserCircle } from 'react-icons/bi'
 import { GetMedia } from '../../../../utils/GetMedia'
@@ -17,13 +18,17 @@ const AuthPopup = () => {
   const { data: Channel, isLoading } = api.useGetProfileQuery(null)
   const { register: RegisterForm, login, logout } = useAction()
   const { ref, setIsShow, isShow } = useOutside(false)
-  const HandleRegister = (data: any, e: any) => {
+  const router = useRouter()
+  const HandleRegister = async (data: any, e: any) => {
     e.preventDefault()
-    RegisterForm(data)
+    await RegisterForm(data)
   }
-  const HandleLogin = (data: any, e: any) => {
+  const HandleLogin = async (data: any, e: any) => {
     e.preventDefault()
-    login(data)
+    await login(data)
+  }
+  const HandleLogout = async (data: any, e: any) => {
+    await logout()
   }
 
   return <>
@@ -31,7 +36,7 @@ const AuthPopup = () => {
                       alt={'Logo'} onClick={() => setIsShow(!isShow)} className={styles.ChannelPhoto} /> :  <BiUserCircle onClick={() => setIsShow(!isShow)} className={styles.userPhoto} /> }
     
     
-    <AuthPopupDiv  Channel={Channel} isShow={isShow} setIsShow={setIsShow} ComponentsRef={ref} user={user} logout={logout} HandleRegister={HandleRegister} HandleLogin={HandleLogin}/>
+    <AuthPopupDiv  Channel={Channel} isShow={isShow} setIsShow={setIsShow} ComponentsRef={ref} user={user} logout={HandleLogout} HandleRegister={HandleRegister} HandleLogin={HandleLogin}/>
   </>
 }
 

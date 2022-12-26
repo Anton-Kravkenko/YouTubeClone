@@ -8,7 +8,7 @@ export interface PopupInterface {
   setIsShow:  Dispatch<SetStateAction<boolean>>
   ComponentsRef: any
   user?: {id: number, email: string} | null
-  logout?: AsyncThunk<{}, void, any>
+  logout?: any
   HandleRegister?: any
   HandleLogin?: any
   SettingsSubmit?: any

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 
 import { useForm } from 'react-hook-form'
+import { toastr } from 'react-redux-toastr'
 import { useOutside } from '../../../../utils/hook/useOutside'
 import { variants } from '../../../../utils/PopupAnimation'
 import { api } from '../../../store/api/api'
@@ -20,6 +21,7 @@ const SettingsPopup = () => {
     await upload(media).unwrap().then((image) => {
       data.avatarPath = image.url
       UploadUserData({ id: user?.id, data: data })
+      toastr.info('Settings', 'Success upload!')
     })
     
   }

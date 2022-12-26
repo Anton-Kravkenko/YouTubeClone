@@ -23,6 +23,8 @@
 	}
 	@media (max-width: 450px) {
 		display: block;
+		height: 400px;
+		overflow: auto;
 	}
 	
 }
@@ -57,4 +59,8 @@
 	
 	
 	
+}
+
+.CardWrapper {
+	margin-bottom: 30px;
 }

@@ -26,7 +26,7 @@
 	padding: 10px 20px 10px 20px;
 	border-radius: 10px;
 	
-	@media (max-width: 1000px) {
+	@media (max-width: 800px) {
 		position: revert;
 	}
 }
@@ -54,7 +54,7 @@
 	transform: translate(-50%, -50%);
 	border-radius: 15px;
 	
-	@media (max-width: 1000px) {
+	@media (max-width: 800px) {
 		position: fixed;
 		background-color: #232731;
 		padding: 30px;
@@ -79,7 +79,11 @@
 	display: flex;
 	gap: 40px;
 	justify-content: space-between;
-flex-wrap: wrap;
+	
+	@media (max-width: 800px) {
+		flex-wrap: wrap;
+	}
+
 }
 
 .CardWrapper {
@@ -88,8 +92,8 @@ flex-wrap: wrap;
 	border-radius: 20px;
 	padding: 20px;
 	border: 1px #637575 solid;
-	@media (max-width: 1000px) {
-		width: fit-content;
+	@media (max-width: 800px) {
+		width: unset;
 	}
 }
 
@@ -104,7 +108,7 @@ flex-wrap: wrap;
 	margin: 20px 0;
 	border-radius: 10px;
 	
-	@media (max-width: 1000px) {
+	@media (max-width: 800px) {
 		height: 50px;
 		width: -webkit-fill-available;
 	}
@@ -118,7 +122,7 @@ flex-wrap: wrap;
 	border: none;
 	padding: 10px;
 	border-radius: 10px;
-	@media (max-width: 1000px) {
+	@media (max-width: 800px) {
 		height: 25px;
 		width: -webkit-fill-available;
 	}
@@ -129,6 +133,7 @@ flex-wrap: wrap;
 	color: #637575;
 	border: none;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 .file::-webkit-file-upload-button {

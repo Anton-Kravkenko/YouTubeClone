@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { toastr } from 'react-redux-toastr'
 import { useOutside } from '../../../../utils/hook/useOutside'
 import { api } from '../../../store/api/api'
 import { videoApi } from '../../../store/api/video.api'
@@ -27,6 +28,7 @@ const UploadVideoPopup = () => {
       updateVideo({ ...VideoData, id: Videoid })
       reset()
       setIsShow(false)
+      toastr.info('Video', 'Success upload!')
       setVideoStage(false)
     })
     

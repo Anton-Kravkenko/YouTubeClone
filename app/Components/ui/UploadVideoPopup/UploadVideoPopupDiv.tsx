@@ -39,7 +39,7 @@ console.log()
               <p className={styles.LoadText}>{!props.FileLoading ? "Load video 👇" : 'Loading...' }</p>
               <input {...register('video')} className={styles.file}
                      type={'file'} />
-              <button className={styles.SubmitButton} type={'submit'}>Send...</button>
+              <button className={styles.SubmitButton} disabled={props.FileLoading} type={'submit'}>Send...</button>
             </form>
           </div>
         </div>
